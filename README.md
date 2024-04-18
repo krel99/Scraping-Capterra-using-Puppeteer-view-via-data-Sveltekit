@@ -11,7 +11,7 @@ This is an admission project for a company I applied to. The goal is to scrape d
 
 2. Data Handling:
 
-    - Extracted links are saved as JSON using Node.js.
+    - Extracted links are saved as JSON using Bun.js.
 
 3. SvelteKit Application:
 
