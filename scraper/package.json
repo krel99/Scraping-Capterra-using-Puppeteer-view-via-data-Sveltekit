@@ -1,0 +1,21 @@
+{
+  "name": "scraper",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "scrape": "bun src/index.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prettier": "^3.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "puppeteer": "^22.6.5",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
