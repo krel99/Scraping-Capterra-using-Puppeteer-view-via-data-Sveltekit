@@ -37,7 +37,7 @@
 	</div>
 	<TreeView bind:this={myTreeView}>
 		{#each categoriesIterable as category}
-			<TreeViewItem>
+			<TreeViewItem indent="ml-16">
 				<h2 class="categoryName">{category[0][0]}</h2>
 				<svelte:fragment slot="children">
 					{#each category[1] as item}
