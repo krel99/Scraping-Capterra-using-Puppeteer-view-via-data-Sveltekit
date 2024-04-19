@@ -56,7 +56,12 @@
 		text-align: center;
 		line-height: 20px;
 		font-size: 1.5rem;
-		margin-bottom: 10px;
+		margin-bottom: 12px;
+		margin-top: 24px;
+	}
+	h2 {
+		font-size: 1.2rem;
+		font-weight: 700;
 	}
 	.container {
 		width: 412px;
