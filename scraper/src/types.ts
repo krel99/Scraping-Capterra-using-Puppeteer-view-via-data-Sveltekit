@@ -1,5 +1,8 @@
 export type Url = `https://${string}`;
 
-export interface CategoryItems {
-    [key: string]: [string | null, Url | null][];
+export type CategoryItem = [string | null, Url | null];
+export type CategoryItems = CategoryItem[];
+
+export interface Categories {
+    [key: string]: CategoryItems;
 }
