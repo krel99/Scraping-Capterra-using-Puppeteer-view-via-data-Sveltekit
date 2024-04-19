@@ -17,43 +17,77 @@
 	// console.log(categoriesIterable);
 
 	// console.log(categoriesIterable[0][1]);
+
+	let myTreeView: TreeView;
+
+	function handleExpandAll() {
+		myTreeView.expandAll();
+	}
+
+	function handleCollapseAll() {
+		myTreeView.collapseAll();
+	}
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-
 <div class="container">
-	<TreeView className="container">
+	<h1>Capterra Categories</h1>
+	<div class="buttons">
+		<button on:click={handleExpandAll}>Expand</button>
+		<button on:click={handleCollapseAll}>Collapse</button>
+	</div>
+	<TreeView bind:this={myTreeView}>
 		{#each categoriesIterable as category}
-			<div class="items">
-				<TreeViewItem>
-					{category[0][0]}
-					<svelte:fragment slot="children">
-						{#each category[1] as item}
-							<!-- <TreeViewItem> -->
-							<a href={item[1]}>{item[0]}</a>
-							<!-- </TreeViewItem> -->
-						{/each}
-					</svelte:fragment>
-				</TreeViewItem>
-			</div>
+			<TreeViewItem>
+				<h2 class="categoryName">{category[0][0]}</h2>
+				<svelte:fragment slot="children">
+					{#each category[1] as item}
+						<!-- <TreeViewItem> -->
+						<div class="link-divider"><a href={item[1]}>{item[0]}</a></div>
+						<!-- </TreeViewItem> -->
+					{/each}
+				</svelte:fragment>
+			</TreeViewItem>
 		{/each}
 	</TreeView>
 </div>
 
 <style>
-	a {
-		text-decoration: none;
+	h1 {
+		text-align: center;
+		line-height: 20px;
+		font-size: 1.5rem;
+		margin-bottom: 10px;
 	}
-	.TreeView {
+	.container {
 		width: 412px;
-		display: flex;
-		flex-direction: row;
-		padding: 6px;
+		padding: 3px;
 		line-height: 14px;
 	}
-
-	.items {
+	.categoryName {
+		display: inline-block;
+		margin-left: 9px;
+	}
+	.buttons {
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.buttons button {
+		background-color: #e0e0e0;
+		border: 2px solid #ccc;
+		padding: 5px 10px;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-right: 10px;
+		width: 96px;
+	}
+	.link-divider {
+		margin-left: 12px;
+		margin-bottom: 6px;
+	}
+	.link-divider:last-child {
+		margin-bottom: 12px;
 	}
 </style>
