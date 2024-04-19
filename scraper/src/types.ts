@@ -1,3 +1,5 @@
+export type Url = `https://${string}`;
+
 export interface CategoryItems {
-    [key: string]: [string | null, string | null][];
+    [key: string]: [string | null, Url | null][];
 }
