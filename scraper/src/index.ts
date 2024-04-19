@@ -6,7 +6,7 @@ import path from 'path';
 import { saveAsJsonAtRoot as saveAsJson, handleCategoryGroups } from './functions';
 import { Categories, Url } from './types';
 
-const WEBSITE_ROOT_URL = 'https://www.capterra.com/';
+const WEBSITE_ROOT_URL = 'https://www.capterra.com';
 const CATEGORY_PAGE_URL = 'https://www.capterra.com/categories/';
 
 puppeteer.use(StealthPlugin());
