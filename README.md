@@ -1,6 +1,8 @@
 # Scraping-Capterra-using-Puppeteer-view-via-data-Sveltekit
 
-This is an admission project for a company I applied to. The goal is to scrape data from Capterra and create a view in Sveltekit.
+This is an admission project for a company I applied to. The goal is to scrape data from Capterra and create a view in Sveltekit using Skeleton UI Toolkit.
+
+![Application preview](https://i.ibb.co/pj3xcHk/Screenshot-from-2024-04-19-19-53-27.png)
 
 ## Data Flow
 
@@ -24,12 +26,13 @@ Data Flow:
 
 ## Implemented features
 
-A scraper saves all content from the categories page in the desired JSON format.
+- a scraper saves all content from the categories page in the desired JSON format
+- SvelteKit application views the data in a tree-like structure
 
-## Planned features
+## Hypothetical features
 
--   SvelteKit application to view the data in a tree-like structure
 -   Could scrape the first page (or 3) of each category for headers
+-   Styles need to be better!
 
 ## Installation
 
@@ -39,7 +42,12 @@ Node or Bun must be installed!
 
 ### Installation
 
+You can skip steps 1, 2, 3 if you want to use an already scraped JSON.
+
 0. Open folder with the project files in the terminal.
 1. Run `cd scraper`
 2. Run `npm install` or `bun install`
-3. Run `npm scrape` or `bun scrape`
+3.0 Edit package.JSON in ~/scraper/package.json scripts line with npm instead of bun if using npm
+3.1 Run `npm scrape` or `bun scrape`
+4. Run `cd ../webView`
+5. Run `npm run dev` or `bun dev` to view JSON in SvelteKit
